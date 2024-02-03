@@ -26,4 +26,4 @@ def DetaljiKorpe(request):
     korpa = Korpa(request)
     for stavka in korpa:
         stavka['formazaazuriranjekolicine'] = FormaZaDodavanjeAutomobilaUKorpu(initial={'kolicina': 1, 'dodati_na_kolicinu': True})
-    return render(request, 'KorpaZaKupovinu/detail.html', {'korpa', korpa})
+    return render(request, 'KorpaZaKupovinu/detail.html', {'korpa': korpa})

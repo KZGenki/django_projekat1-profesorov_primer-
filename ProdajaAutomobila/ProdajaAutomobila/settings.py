@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'SalonAutomobila.apps.SalonautomobilaConfig',
-    'SalonAutomobila.apps.KorpazakupovinuConfig',
+    'KorpaZaKupovinu.apps.KorpazakupovinuConfig',
+    'Porudzbina.apps.PorudzbinaConfig',
 ]
 
 MIDDLEWARE = [
