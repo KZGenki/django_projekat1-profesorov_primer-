@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'SalonAutomobila.apps.SalonautomobilaConfig',
+    'SalonAutomobila.apps.KorpazakupovinuConfig',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL='/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media/')
+
+KORPA_ZA_KUPOVINU_SESSION_KEY = 'korpazakupovinusessionkey'
