@@ -6,7 +6,7 @@ class Segment(models.Model):
     naziv = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, unique=True)
     class Meta:
-        ordering = ('naziv')
+        ordering = ('naziv',)
         verbose_name = 'segment'
         verbose_name_plural = 'segmenti'
     def __str__(self):  return self.naziv
@@ -24,9 +24,8 @@ class Automobil(models.Model):
     kreiran = models.DateTimeField(auto_now_add=True)
     azuriran = models.DateTimeField(auto_now=True)
     class Meta:
-        ordering = ('naziv')
+        ordering = ('naziv',)
         index_together = (('id', 'slug'))
         verbose_name_plural = 'automobili'
     def __str__(self): return self.naziv
     def ApsolutniURL(self): return reverse('SalonAutomobila:DetaljiAutomobila', args=[self.id, self.slug])
-    
